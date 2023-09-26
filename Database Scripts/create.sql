@@ -15,9 +15,3 @@ CREATE TABLE room (
   room_name VARCHAR(255) NOT NULL,
   PRIMARY KEY (room_id)
 );
-
-CREATE TABLE student (
-  student_id INT NOT NULL AUTO_INCREMENT,
-  student_name VARCHAR(255) NOT NULL,
-  PRIMARY KEY (student_id)
-);
