@@ -1,17 +1,18 @@
 CREATE TABLE subject (
-  subject_id INT NOT NULL AUTO_INCREMENT,
-  subject_name VARCHAR(255) NOT NULL,
-  PRIMARY KEY (subject_id)
+  subjectID VARCHAR(10) NOT NULL,
+  subjectName VARCHAR(45) NOT NULL,
+  PRIMARY KEY (subjectID)
 );
 
 CREATE TABLE lecturer (
-  lecturer_id INT NOT NULL AUTO_INCREMENT,
-  lecturer_name VARCHAR(255) NOT NULL,
-  PRIMARY KEY (lecturer_id)
+  lecturerID VARCHAR(10) NOT NULL,
+  firstName VARCHAR(45) NOT NULL,
+  lastName VARCHAR(45) NOT NULL,
+  PRIMARY KEY (lecturerID)
 );
 
 CREATE TABLE room (
-  room_id INT NOT NULL AUTO_INCREMENT,
-  room_name VARCHAR(255) NOT NULL,
-  PRIMARY KEY (room_id)
+  roomID VARCHAR(10) NOT NULL,
+  roomName VARCHAR(45) NOT NULL,
+  PRIMARY KEY (roomID)
 );

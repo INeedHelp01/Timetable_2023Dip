@@ -1,17 +1,3 @@
-/* WORKS! */
-INSERT INTO subject (subjectID, subjectName, room_roomID) VALUES
-('UWB001', 'Underwater Basketweaving', 'Room 101'),
-('UWB002', 'Underwater Basketweaving History', 'Room 102'),
-('UWB003', 'Underwater Basketweaving Techniques', 'Room 103'),
-('UWB004', 'Underwater Basketweaving Design', 'Room 101'),
-('UWB005', 'Underwater Basketweaving Business', 'Room 102'),
-('UWB006', 'Underwater Basketweaving Photography', 'Room 103'),
-('UWB007', 'Underwater Basketweaving Marketing', 'Room 101'),
-('UWB008', 'Underwater Basketweaving Sales', 'Room 102'),
-('UWB009', 'Underwater Basketweaving Customer Service', 'Room 103'),
-('UWB010', 'Underwater Basketweaving Emp Opportunities', 'Room 101');
-
-/* Works!*/
 INSERT INTO lecturer (lecturerID, firstName, lastName) VALUES
 ('LEC001', 'Alice', 'Smith'),
 ('LEC002', 'Bob', 'Jones'),
@@ -24,13 +10,23 @@ INSERT INTO lecturer (lecturerID, firstName, lastName) VALUES
 ('LEC009', 'Ian', 'Taylor'),
 ('LEC010', 'Jack', 'Johnson');
 
-/* WORKS! */
 INSERT INTO room (roomID, roomName) VALUES
 ('Room 101', 'The Fridge'),
 ('Room 102', 'The Freezer'),
 ('Room 103', 'The Sauna');
 
-/* WORKS! */
+INSERT INTO subject (subjectID, subjectName, room_roomID) VALUES
+('UWB001', 'Underwater Basketweaving', 'Room 101'),
+('UWB002', 'Underwater Basketweaving History', 'Room 102'),
+('UWB003', 'Underwater Basketweaving Techniques', 'Room 103'),
+('UWB004', 'Underwater Basketweaving Design', 'Room 101'),
+('UWB005', 'Underwater Basketweaving Business', 'Room 102'),
+('UWB006', 'Underwater Basketweaving Photography', 'Room 103'),
+('UWB007', 'Underwater Basketweaving Marketing', 'Room 101'),
+('UWB008', 'Underwater Basketweaving Sales', 'Room 102'),
+('UWB009', 'Underwater Basketweaving Customer Service', 'Room 103'),
+('UWB010', 'Underwater Basketweaving Emp Opportunities', 'Room 101');
+
 INSERT INTO timeslot (day, time, subject_subjectID) VALUES
 ('Monday', '09:00', 'UWB001'),
 ('Monday', '12:00', 'UWB002'),
