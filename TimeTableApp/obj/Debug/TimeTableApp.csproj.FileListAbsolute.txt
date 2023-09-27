@@ -1,0 +1,12 @@
+C:\Users\woole\Desktop\timetableproject\Timetable_2023Dip\TimeTableApp\bin\Debug\TimeTableApp.exe.config
+C:\Users\woole\Desktop\timetableproject\Timetable_2023Dip\TimeTableApp\bin\Debug\TimeTableApp.exe
+C:\Users\woole\Desktop\timetableproject\Timetable_2023Dip\TimeTableApp\bin\Debug\TimeTableApp.pdb
+C:\Users\woole\Desktop\timetableproject\Timetable_2023Dip\TimeTableApp\obj\Debug\TimeTableApp.csproj.AssemblyReference.cache
+C:\Users\woole\Desktop\timetableproject\Timetable_2023Dip\TimeTableApp\obj\Debug\TimeTableApp.Main.resources
+C:\Users\woole\Desktop\timetableproject\Timetable_2023Dip\TimeTableApp\obj\Debug\TimeTableApp.Properties.Resources.resources
+C:\Users\woole\Desktop\timetableproject\Timetable_2023Dip\TimeTableApp\obj\Debug\TimeTableApp.Search.resources
+C:\Users\woole\Desktop\timetableproject\Timetable_2023Dip\TimeTableApp\obj\Debug\TimeTableApp.TimeTable.resources
+C:\Users\woole\Desktop\timetableproject\Timetable_2023Dip\TimeTableApp\obj\Debug\TimeTableApp.csproj.GenerateResource.cache
+C:\Users\woole\Desktop\timetableproject\Timetable_2023Dip\TimeTableApp\obj\Debug\TimeTableApp.csproj.CoreCompileInputs.cache
+C:\Users\woole\Desktop\timetableproject\Timetable_2023Dip\TimeTableApp\obj\Debug\TimeTableApp.exe
+C:\Users\woole\Desktop\timetableproject\Timetable_2023Dip\TimeTableApp\obj\Debug\TimeTableApp.pdb
