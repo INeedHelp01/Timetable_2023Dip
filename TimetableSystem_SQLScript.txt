@@ -1,0 +1,79 @@
+-- MySQL Workbench Forward Engineering
+
+SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0;
+SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
+SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION';
+
+-- -----------------------------------------------------
+-- Schema mydb
+-- -----------------------------------------------------
+
+-- -----------------------------------------------------
+-- Schema mydb
+-- -----------------------------------------------------
+CREATE SCHEMA IF NOT EXISTS `mydb` DEFAULT CHARACTER SET utf8 ;
+USE `mydb` ;
+
+-- -----------------------------------------------------
+-- Table `mydb`.`room`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `mydb`.`room` (
+  `roomID` VARCHAR(10) NOT NULL,
+  `roomName` VARCHAR(45) NOT NULL,
+  PRIMARY KEY (`roomID`))
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `mydb`.`subject`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `mydb`.`subject` (
+  `subjectID` VARCHAR(10) NOT NULL,
+  `subjectName` VARCHAR(45) NOT NULL,
+  `room_roomID` VARCHAR(10) NOT NULL,
+  PRIMARY KEY (`subjectID`),
+  INDEX `fk_subject_room1_idx` (`room_roomID` ASC) VISIBLE,
+  CONSTRAINT `fk_subject_room1`
+    FOREIGN KEY (`room_roomID`)
+    REFERENCES `mydb`.`room` (`roomID`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `mydb`.`lecturer`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `mydb`.`lecturer` (
+  `lecturerID` VARCHAR(10) NOT NULL,
+  `firstName` VARCHAR(45) NOT NULL,
+  `lastName` VARCHAR(45) NOT NULL,
+  PRIMARY KEY (`lecturerID`))
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `mydb`.`subject_has_lecturer`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `mydb`.`subject_has_lecturer` (
+  `subject_subjectID` VARCHAR(10) NOT NULL,
+  `lecturer_lecturerID` VARCHAR(10) NOT NULL,
+  PRIMARY KEY (`subject_subjectID`, `lecturer_lecturerID`),
+  INDEX `fk_subject_has_lecturer_lecturer1_idx` (`lecturer_lecturerID` ASC) VISIBLE,
+  INDEX `fk_subject_has_lecturer_subject_idx` (`subject_subjectID` ASC) VISIBLE,
+  CONSTRAINT `fk_subject_has_lecturer_subject`
+    FOREIGN KEY (`subject_subjectID`)
+    REFERENCES `mydb`.`subject` (`subjectID`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_subject_has_lecturer_lecturer1`
+    FOREIGN KEY (`lecturer_lecturerID`)
+    REFERENCES `mydb`.`lecturer` (`lecturerID`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+
+SET SQL_MODE=@OLD_SQL_MODE;
+SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
+SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
