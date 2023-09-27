@@ -153,6 +153,10 @@
     <Compile Include="Lecturer.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="room.cs" />
+    <Compile Include="subject.cs" />
+    <Compile Include="subject_lecturer.cs" />
+    <Compile Include="TimeSlots.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>

@@ -40,12 +40,14 @@
             this.Slot24 = new System.Windows.Forms.RichTextBox();
             this.Slot33 = new System.Windows.Forms.RichTextBox();
             this.Slot34 = new System.Windows.Forms.RichTextBox();
+            this.TestLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // Slot11
             // 
             this.Slot11.Location = new System.Drawing.Point(29, 24);
             this.Slot11.Name = "Slot11";
+            this.Slot11.ReadOnly = true;
             this.Slot11.Size = new System.Drawing.Size(100, 96);
             this.Slot11.TabIndex = 0;
             this.Slot11.Text = "";
@@ -138,11 +140,22 @@
             this.Slot34.TabIndex = 11;
             this.Slot34.Text = "";
             // 
+            // TestLabel
+            // 
+            this.TestLabel.AutoSize = true;
+            this.TestLabel.Location = new System.Drawing.Point(515, 83);
+            this.TestLabel.Name = "TestLabel";
+            this.TestLabel.Size = new System.Drawing.Size(68, 16);
+            this.TestLabel.TabIndex = 12;
+            this.TestLabel.Text = "TestLabel";
+            this.TestLabel.Click += new System.EventHandler(this.label1_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.TestLabel);
             this.Controls.Add(this.Slot34);
             this.Controls.Add(this.Slot33);
             this.Controls.Add(this.Slot24);
@@ -159,6 +172,7 @@
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -176,6 +190,7 @@
         private System.Windows.Forms.RichTextBox Slot24;
         private System.Windows.Forms.RichTextBox Slot33;
         private System.Windows.Forms.RichTextBox Slot34;
+        private System.Windows.Forms.Label TestLabel;
     }
 }
 
