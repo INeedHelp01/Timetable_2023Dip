@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -44,6 +43,12 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.txtBoxAssignedCrs = new System.Windows.Forms.RichTextBox();
+            this.txtBoxCourse = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.btn = new System.Windows.Forms.Button();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -55,14 +60,6 @@
             this.label1.Size = new System.Drawing.Size(565, 60);
             this.label1.TabIndex = 0;
             this.label1.Text = "Search For A Class";
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(239, 107);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(131, 23);
-            this.comboBox1.TabIndex = 1;
             // 
             // label2
             // 
@@ -162,7 +159,7 @@
             // 
             this.txtBoxlecturerID.Location = new System.Drawing.Point(642, 107);
             this.txtBoxlecturerID.Name = "txtBoxlecturerID";
-            this.txtBoxlecturerID.Size = new System.Drawing.Size(100, 25);
+            this.txtBoxlecturerID.Size = new System.Drawing.Size(117, 25);
             this.txtBoxlecturerID.TabIndex = 12;
             // 
             // label6
@@ -179,7 +176,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Gulim", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label7.Location = new System.Drawing.Point(461, 157);
+            this.label7.Location = new System.Drawing.Point(25, 197);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(175, 23);
             this.label7.TabIndex = 14;
@@ -187,19 +184,64 @@
             // 
             // txtBoxAssignedCrs
             // 
-            this.txtBoxAssignedCrs.Location = new System.Drawing.Point(642, 154);
+            this.txtBoxAssignedCrs.Location = new System.Drawing.Point(206, 197);
             this.txtBoxAssignedCrs.Name = "txtBoxAssignedCrs";
-            this.txtBoxAssignedCrs.Size = new System.Drawing.Size(100, 96);
+            this.txtBoxAssignedCrs.ReadOnly = true;
+            this.txtBoxAssignedCrs.Size = new System.Drawing.Size(117, 123);
             this.txtBoxAssignedCrs.TabIndex = 15;
             this.txtBoxAssignedCrs.Text = "";
+            // 
+            // txtBoxCourse
+            // 
+            this.txtBoxCourse.Location = new System.Drawing.Point(239, 107);
+            this.txtBoxCourse.Name = "txtBoxCourse";
+            this.txtBoxCourse.Size = new System.Drawing.Size(100, 25);
+            this.txtBoxCourse.TabIndex = 16;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(228, 329);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(111, 41);
+            this.button1.TabIndex = 17;
+            this.button1.Text = "Search";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.panel1.Location = new System.Drawing.Point(4, 72);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(374, 348);
+            this.panel1.TabIndex = 18;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.panel2.Controls.Add(this.btn);
+            this.panel2.Controls.Add(this.label7);
+            this.panel2.Controls.Add(this.txtBoxAssignedCrs);
+            this.panel2.Location = new System.Drawing.Point(433, 72);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(339, 348);
+            this.panel2.TabIndex = 19;
+            // 
+            // btn
+            // 
+            this.btn.Location = new System.Drawing.Point(80, 82);
+            this.btn.Name = "btn";
+            this.btn.Size = new System.Drawing.Size(243, 57);
+            this.btn.TabIndex = 0;
+            this.btn.Text = "Check Assigned Course";
+            this.btn.UseVisualStyleBackColor = true;
             // 
             // Search
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(971, 457);
-            this.Controls.Add(this.txtBoxAssignedCrs);
-            this.Controls.Add(this.label7);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.txtBoxCourse);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.txtBoxlecturerID);
             this.Controls.Add(this.btnExit2);
@@ -212,11 +254,14 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.label1);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Search";
             this.Text = "Search";
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -225,7 +270,6 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
@@ -240,5 +284,10 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.RichTextBox txtBoxAssignedCrs;
+        private System.Windows.Forms.TextBox txtBoxCourse;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Button btn;
     }
 }
